@@ -70,7 +70,7 @@ public class $serviceClass implements $serviceInterface {
 		$entityKeyClass key = new $entityKeyClass($keyArgsList);
 		return ${repositoryInstance}.findById(key).orElse(null);
 #else
-		return ${repositoryInstance}.findById($keyArgsList);
+		return ${repositoryInstance}.findById($keyArgsList).orElse(null);
 #end
 	}
 
